@@ -33,10 +33,8 @@ function checkISBN(numbers) {
 	}
 
 	var pruefziffer = ueberpruefen % 11;
-	var korrekt;
 
 	if (pruefziffer === zifferArray[9]) {
-		korrekt = "ISBN OK";
 		pruefziffer = String(pruefziffer);
 
 		if (x !== -1) {
@@ -49,11 +47,10 @@ function checkISBN(numbers) {
 
 
 	} else {
-		korrekt = "ISBN corrupt";
 		pruefziffer = String(pruefziffer);
 	}
 
-	return korrekt;
+	return pruefziffer;
 
 }
 
