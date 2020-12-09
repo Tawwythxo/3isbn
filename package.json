@@ -1,24 +1,30 @@
 {
-  "name": "isbn",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tawwythxo/isbn.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Tawwythxo/isbn/issues"
-  },
-  "homepage": "https://github.com/Tawwythxo/isbn#readme",
-  "dependencies": {
-    "jest": "^26.6.3"
-  },
-  "devDependencies": {}
+    "name": "isbn",
+    "version": "1.0.0",
+    "description": "",
+    "main": "checkISBN.js",
+    "scripts": {
+        "test": "jest",
+        "start": "ws",
+        "build": "webpack --config ./webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tawwythxo/isbn.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Tawwythxo/isbn/issues"
+    },
+    "homepage": "https://github.com/Tawwythxo/isbn#readme",
+    "dependencies": {
+        "jest": "^26.6.3",
+        "local-web-server": "^4.2.1"
+    },
+    "devDependencies": {
+        "webpack": "^5.10.0",
+        "webpack-cli": "^4.2.0"
+    }
 }
