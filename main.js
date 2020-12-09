@@ -14,5 +14,7 @@ function berechne() {
 	}
 }
 
-const button = document.querySelector('#berechne');
-button.addEventListener('click', berechne);
+
+window.onload = function () {
+	document.getElementById("isbn").onchange = berechne;
+};
