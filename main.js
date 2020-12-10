@@ -15,7 +15,6 @@ function berechne() {
 
 	const eingabe = inputComplete.join("");
 
-
 	const last = eingabe.slice(-1);
 	const ergebnisLeer = "";
 	const laengeEingabe = eingabe.length;
@@ -52,7 +51,6 @@ function berechne() {
 }
 
 
-
 isbn.onkeyup = function (event) {
 	var key = event.keyCode || event.charCode;
 
@@ -74,8 +72,6 @@ isbn3.onkeyup = function (event) {
 		document.getElementById("isbn4").focus();
 	}
 }
-
-
 
 
 isbn2.onkeydown = function (event) {
@@ -102,9 +98,6 @@ isbn4.onkeydown = function (event) {
 
 	}
 }
-
-
-
 
 
 window.onload = function () {
