@@ -15,7 +15,10 @@ function berechne() {
 
 	}
 	else if (checkISBN(eingabe) === "") {
+		const korrekt = "ISBN OK";
 
+		document.getElementById("result").style.color = "green";
+		document.getElementById("gueltigkeit").value = korrekt;
 	}
 	else {
 		const korrekt = "ISBN corrupt";
