@@ -6,12 +6,15 @@ function berechne() {
 
 	const last = eingabe.slice(-1);
 
-	document.querySelector('#isbn').innerHTML = checkISBN(eingabe);
+	//document.querySelector('#isbn').innerHTML = checkISBN(eingabe);
 	if (checkISBN(eingabe) === last) {
 		const korrekt = "ISBN OK";
 
 		document.getElementById("result").style.color = "green";
 		document.getElementById("gueltigkeit").value = korrekt;
+
+	}
+	else if (checkISBN(eingabe) === "") {
 
 	}
 	else {
