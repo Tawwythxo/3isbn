@@ -1,35 +1,38 @@
 const { checkISBN } = require('./checkISBN')
 
-function berechne() {
-
+function isISBNValid() {
 	const eingabe = document.getElementById('isbn').value;
-
 	const last = eingabe.slice(-1);
 
-	//document.querySelector('#isbn').innerHTML = checkISBN(eingabe);
-	if (checkISBN(eingabe) === last) {
-		const korrekt = "ISBN OK";
-
-		document.getElementById("result").style.color = "green";
-		document.getElementById("gueltigkeit").value = korrekt;
-
-	}
-	else if (checkISBN(eingabe) === "") {
-		const korrekt = "ISBN OK";
-
-		document.getElementById("result").style.color = "green";
-		document.getElementById("gueltigkeit").value = korrekt;
+	const pruefziffer = checkISBN(eingabe)
+	if (pruefziffer === last || pruefziffer === '') {
+		return "OK"
 	}
 	else {
-		const korrekt = "ISBN corrupt";
-
-		document.getElementById("result").style.color = "red";
-		document.getElementById("gueltigkeit").value = korrekt;
-
+		return "corrupt"
 	}
+
 }
 
 
-window.onload = function () {
-	document.getElementById("isbn").onchange = berechne;
-};
+function berechne() {
+	var korrekt;
+	if (isISBNValid() === "OK") {
+		korrekt = "ISBN OK"
+		document.getElementById("result").style.color = "green";
+		document.getElementById("gueltigkeit").value = korrekt;
+	} else {
+		korrekt = "ISBN corrupt"
+		document.getElementById("result").style.color = "red";
+		document.getElementById("gueltigkeit").value = korrekt;
+	}
+	return korrekt;
+}
+
+function ergebnis() {
+	isISBNValid();
+	berechne();
+}
+
+const feedback = document.querySelector('#isbn')
+feedback.addEventListener('input', ergebnis)
